@@ -32,7 +32,14 @@ int main()
     
     qtrn::quaternion<double> z1 = qtrn::RegularP100(q), z2 = qtrn::RegularP010(q), z3 = qtrn::RegularP001(q);
 
-    std::cout << std::format("{}=={}? {}\n", qtrn::RegularP(1, 0, 0, q), z1, (qtrn::RegularP(1, 0, 0, q) == z1));
+    std::cout << "P(1,0,0)==z1? " << (qtrn::RegularP(1, 0, 0, q) == z1) << "\n";
+    std::cout << "P(0,1,0)==z1? " << (qtrn::RegularP(0, 1, 0, q) == z2) << "\n";
+    std::cout << "P(0,0,1)==z1? " << (qtrn::RegularP(0, 0, 1, q) == z3) << "\n";
+
+    //qtrn::quaternion<double> u = z1 * z2;
+    //u += z2 * z1;
+
+    std::cout << "P(1,1,0)==z1z2 + z2z1? " << (qtrn::RegularP(1, 1, 0, q) == q) << "\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
