@@ -26,5 +26,13 @@
     <ClInclude Include="quaternion.tpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="qpyramid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qpyramid.tpp">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

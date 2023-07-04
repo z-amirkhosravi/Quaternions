@@ -6,6 +6,12 @@
 
 namespace qtrn {
 	template <class T>
+	quaternion<T>::quaternion()	{}
+
+	template <class T>
+	quaternion<T>::quaternion(T t0) : t(t0), x(0), y(0), z(0) {}
+
+	template <class T>
 	quaternion<T>::quaternion(T t0, T x0, T y0, T z0) :
 		t(t0), x(x0), y(y0), z(z0)
 	{}
@@ -50,6 +56,12 @@ namespace qtrn {
 			t* q.z + x * q.y - y * q.x + z * q.t };
 	}
 
+	// The following inherits undefined behavior from inv() when q is zero.
+	template <class T>
+	quaternion<T> quaternion<T>::operator/ (const quaternion<T>& q) const {
+		return *this * q.inv();
+	}
+
 	template <class T>
 	quaternion<T> & quaternion<T>::operator+= (const quaternion<T>& q) {
 		t += q.t;
@@ -57,6 +69,16 @@ namespace qtrn {
 		y += q.y;
 		z += q.z;
 		return *this;
+	}
+
+	template <class T>
+	quaternion<T>& quaternion<T>::operator*= (const quaternion<T>& q) {
+		return *this = *this * q;
+	}
+
+	template <class T>
+	quaternion<T>& quaternion<T>::operator/= (const quaternion<T>& q) {
+		return *this = *this / q;
 	}
 
 	template <class T>
@@ -133,7 +155,8 @@ namespace qtrn {
 		for (int i = 0; i <= std::min(a, m); i++)
 			for (int j = 0; j <= std::min(b, m - i); j++)
 				for (int k = 0; k <= m - i - j; k++)
-					S += RegularP(i, j, k, q) * RegularP(a - i, b - j, c - k, q);
+					if (i || j || k)
+						S += RegularP(i, j, k, q) * RegularP(a - i, b - j, c - k, q);
 
 		return S;
 	}

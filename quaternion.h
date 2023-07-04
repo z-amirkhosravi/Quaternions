@@ -13,6 +13,8 @@ template <class T>
 class quaternion {
 public:
 	T t, x, y, z;
+	quaternion();
+	quaternion(T);
 	quaternion(T, T, T, T);
 	quaternion<T> conj() const;
 	quaternion<T> inv() const;
@@ -22,7 +24,12 @@ public:
 	quaternion<T> operator+ (const quaternion<T>& q) const;
 	quaternion<T> operator- (const quaternion<T>& q) const;
 	quaternion<T> operator* (const quaternion<T>& q) const;
+	quaternion<T> operator/ (const quaternion<T>& q) const;
+
 	quaternion<T>& operator+= (const quaternion<T>& q);	
+	quaternion<T>& operator-= (const quaternion<T>& q);
+	quaternion<T>& operator*= (const quaternion<T>& q);
+	quaternion<T>& operator/= (const quaternion<T>& q);
 
 	quaternion<T> operator* (const T& s) const;
 
@@ -52,13 +59,13 @@ const quaternion<T> e3{ 0, 0, 0, 1 };
 // the Fueter regular functions:
 
 template <class T>
-quaternion<T> z1(quaternion<T> q);
+quaternion<T> RegularP100(quaternion<T> q);
 
 template <class T>
-quaternion<T> z2(quaternion<T> q);
+quaternion<T> RegularP010(quaternion<T> q);
 
 template <class T>
-quaternion<T> z3(quaternion<T> q);
+quaternion<T> RegularP001(quaternion<T> q);
 
 template <class T>
 quaternion<T> RegularP(int a, int b, int c, quaternion<T> q);

@@ -144,12 +144,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClInclude Include="qpyramid.h" />
     <ClInclude Include="quaternion.tpp">
       <FileType>CppCode</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="quaternion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qpyramid.tpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
