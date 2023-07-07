@@ -1,5 +1,4 @@
 #include "quaternion.h"
-#include <format>
 #include <ostream>
 
 // 2023-05-11:	Created by Z.Amir-Khosravi

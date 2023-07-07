@@ -35,8 +35,8 @@ public:
 
 	bool operator== (const quaternion<T>& q) const;
 
-	template <class  T>
-	friend std::ostream& operator<<(std::ostream& os, const quaternion<T>& q);
+	template <class U>
+	friend std::ostream& operator<<(std::ostream& os, const quaternion<U>& q);
 };
 
 
