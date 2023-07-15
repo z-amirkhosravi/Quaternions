@@ -1,10 +1,17 @@
 
 
 #include "quaternion.h"
+#include "regularg.h"
 #include "qpyramid.h"
 
 #include <iostream>
 #include <vector>
+
+#include <cln/real_io.h>
+#include <ginac/ginac.h>
+
+
+//  This is unorganized test code to see if the basic functions work. At some point it has to be made systematic into a test suite.
 
 int main()
 {
@@ -57,4 +64,30 @@ int main()
 
     std::cout << "QPyramid(1,1,0) = " << qp(1, 1, 0) << "\n";
 
+    std::cout << "Testing CLN..." << std::endl;
+    qtrn::quaternion<cln::cl_R> qq(1,0,0,0);
+
+    std::cout << "qq = " << qq << std::endl;
+
+    std::cout <<"Testing GiNaC..." << std::endl;
+
+    GiNaC::symbol t("t"), x("x"), y("y"), z("z");
+    std::cout << t* x * y * z << std::endl;
+
+    qtrn::quaternion<GiNaC::ex> qex(t,x,y,z);
+    std::cout << "qex = " << qex << std::endl;
+    qtrn::quaternion<GiNaC::ex> N = qex.norm();
+    std::cout << "N(qex)" << N << std::endl;
+
+    std::cout << "G(qex) = " << qex.inv()/qex.norm()  << std::endl;
+
+    quaternion<GiNaC::ex> SRG1 = qtrn::SymbolicRegularG(1,1,1);
+    quaternion<GiNaC::ex> SRG2 = qtrn::RegularG(1,1,1,qex);
+
+    std::cout << "SRG1(1,1,1) = " << SRG1 << std::endl;
+    std::cout << "SRG2(1,1,1) = " << SRG2 << std::endl;
+
+    std::cout << "SRG1 - SRG2 = " << (SRG1 - SRG2) << std::endl;
+
+    std::cout << "SRG1==SRG2?" << (SRG1==SRG2) << std::endl;
 }

@@ -10,7 +10,9 @@
                 "-g",
                 "${workspaceFolder}/src/*.cpp",
                 "-o",
-                "${workspaceFolder}/bin/mainrun"
+                "${workspaceFolder}/bin/mainrun",
+                "-lcln",
+                "-lginac"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

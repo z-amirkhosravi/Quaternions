@@ -161,16 +161,4 @@ namespace qtrn {
 	}
 }
 
-// This code was copy pasted from cppresources, attempting to specialize std::format for quaternion<T>
-// It doesn't yet work, but should be possible.
-// 
-//template<class T, class CharT>
-//struct std::formatter<qtrn::quaternion<T>, CharT> : std::formatter<T, CharT>
-//{
-//	template<class FormatContext>
-//	auto format(qtrn::quaternion<T> q, FormatContext& fc) const
-//	{
-//		return std::formatter<T, CharT>::format("({},{},{},{})", q.t, q.x, q.y, q.z, fc);
-//	}
-//};
 
