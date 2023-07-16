@@ -1,7 +1,7 @@
 #include "quaternion.h"
 #include <ostream>
 
-// 2023-05-11:	Created by Z.Amir-Khosravi
+// 2023-05-11:	Created ( Z.Amir-Khosravi)
 
 namespace qtrn {
 	template <class T>
@@ -34,7 +34,8 @@ namespace qtrn {
 
 	template <class T>
 	quaternion<T> quaternion<T>::inv() const {
-		return this->conj() * (1 / this->norm());			// note this can exhibit undefined behavior because of 1/this->norm() 
+		return this->conj() * (1 / this->norm());			// note this will have undefined behavior when norm() = 0
+
 	}
 
 	template <class T>
@@ -90,6 +91,8 @@ namespace qtrn {
 		return quaternion<T>{s * t, s * x, s * y, s * z };
 	}
 
+	// Operator << for writing to stream. Following std::complex, we output in the format (t,x,y,z)
+
 	template <class T>
 	std::ostream& operator<<(std::ostream& os, const quaternion<T>& q) {
 		os << '(' << q.t << ',' << q.x << ',' << q.y << ',' << q.z << ')';
@@ -97,7 +100,7 @@ namespace qtrn {
 	}
 
 
-	//  the basic Fueter-regular functions
+	//  the basic homogeneous Fueter-regular monomials:
 
 	template <class T>
 	quaternion<T> RegularP100(quaternion<T> q) {
@@ -120,7 +123,8 @@ namespace qtrn {
 		return q.conj() / (q.norm() * q.norm());
 	}
 
-	// This function computes the _unnormalized_ regular polynomials. That is, without the 1/n! factor. 
+	// Computes the value of the Fueter-regular P(a,b,c) at a given quaternion q
+
 	template <class T>
 	quaternion<T> RegularP(int a, int b, int c, quaternion<T> q) {
 		if (!a && !b && !c)
