@@ -38,7 +38,7 @@ real components of $E_{\nu}(L)$ have any significant algebraic properties when t
 
 The code here compiles with GNU C++ running under the Windows Linux Subsystem. It uses the <a href=https://www.ginac.de/>GiNaC<a> library for symbolic computations, which in turn uses <a href=https://www.ginac.de/CLN/>CLN</a>.
 
-Everything is in the namespace `qtrn`. There is a template class `qtrn::quaternion<T>` where $T$ is the data type of the components $t,x,y,z$ for a quaternion $q = t + ix + iy + iz$. To compute one of the quantities $E_{\nu}(L)$
+Everything is in the namespace `qtrn`. There is a template class `qtrn::quaternion<T>` where $T$ is the data type of the components $t,x,y,z$ for a quaternion $q = t + ix + jy + kz$. To compute one of the quantities $E_{\nu}(L)$
 described above, we can write
 
 ```cpp
