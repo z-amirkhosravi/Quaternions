@@ -41,7 +41,7 @@ The code here compiles with GNU C++ running under the Windows Linux Subsystem. I
 Everything is in the namespace `qtrn`. There is a template class `qtrn::quaternion<T>` where $T$ is the data type of the components $t,x,y,z$ for a quaternion $q = t + ix + iy + iz$. To compute one of the quantities $E_{\nu}(L)$
 described above, we can write
 
-```
+```cpp
 
 #include <iostream>
 #include <ginac/ginac.h>
