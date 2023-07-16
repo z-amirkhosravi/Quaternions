@@ -27,10 +27,12 @@ $$G_{(1,1,1)}(q) = 192\frac{ix^2yz + jxy^2 z + kxyz^2-txyz}{(z^2+t^2+x^2+y^2)^5}
 
 The number of operations required to compute each of these functions grows exponentially as $n=a+b+c$ increases. Compared with $z^n$ from complex analysis there is just a lot more to compute. 
 
+See my <a href=https://arxiv.org/pdf/2002.06140.pdf>preprint</a> for more detailed information about quaternionic analysis.
+
 I'm especially interested in computing values of the form
 $$E_{\nu}(L)= \sum_{x \in L} G_{\nu}(x)$$
 where $x$ varies over a lattice $L$ of rank $4$ embedded in quaternion space. These are quaternionic analogues sof complex _Eisenstein series_ which are a type of modular form. It would be interesting to check numerically whether the
-real components of $E_{\nu}(L)$ have any significant algebraic properties when the lattice $L$ has an arithmetic origin. To do this, one has to compute $E_{\nu}(L)$ to many significant digits, and at the moment this takes too long. 
+real components of $E_{\nu}(L)$ have any significant algebraic properties when the lattice $L$ has an arithmetic origin. To do this, one has to compute $E_{\nu}(L)$ to many significant digits, and at the moment this just takes too long. 
 
 # Implementation
 
@@ -80,7 +82,7 @@ terms and takes about ten seconds. The third attempt tries $20^4=160,000$ terms 
 ```
 
 As might be apparent from how different the results are, the convergence is very slow. The function $G_{(1,1,1)}$ is homogeneous of order $-4$, which means it goes to zero just fast enough for the lattice
-sum to converge. If we try $E_{(a,b,c)}(L)$ wit $a+b+c$ larger, the convergence will be faster, but the summand functions $G_{(a,b,c)}$ will get more complicated.
+sum to converge. If we try $E_{(a,b,c)}(L)$ with $a+b+c$ larger, the convergence will be faster, but the summand functions $G_{(a,b,c)}$ will get more complicated.
 
 One either has to have a very fast computer and a great deal of patience, or find a better way.
 
