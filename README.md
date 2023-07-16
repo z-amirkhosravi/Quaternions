@@ -15,7 +15,7 @@ where:
 - The sums are indexed by triples $\nu = (a,b,c)$ of non-negative integers, with $abc\neq 0$.
 - The functions $P_{\nu}(q)$ are non-commutative polynomials in the variables
   $$z_1 = it - x,\ \ \  z_2 = jt - y,\ \ \  z_3 = kt - z,$$
-  derivevd from the independent variable $q = t + ix + iy + iz$.
+  derived from the independent variable $q = t + ix + iy + iz$.
 - The functions $G_{\nu}(q)$ are given by the partial derivatives
   
 $$G_{a,b,c}(q) = \frac{\partial}{\partial^a x \partial^b y \partial^c z} \frac{t-ix-iy-iz}{(t^2+x^2+y^2+z^2)^2}.$$
