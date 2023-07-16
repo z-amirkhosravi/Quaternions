@@ -25,7 +25,7 @@ $$P_{1,1,1}(q) = z_1 z_2 z_3 + z_1 z_3 z_2 + z_2 z_3 z_1 + z_2 z_1 z_3 + z_3 z_1
 and
 $$G_{1,1,1}(q) = 192\frac{ix^2yz + jxy^2 z + kxyz^2-txyz}{(z^2+t^2+x^2+y^2)^5} - 24\frac{iyz+jxz+kyz}{(t^2+x^2+y^2+z^2)^4}$$
 
-The number of operations required to compute each of these functions grows exponentially as $n=a+b+c$ increases. Compared with $z^n$ from complex analysis there is just a lot more to compute. 
+The number of operations required to compute each of these functions grows quickly as $n=a+b+c$ increases. Compared with $z^n$ from complex analysis there is just a lot more to compute. 
 
 See my <a href=https://arxiv.org/pdf/2002.06140.pdf>preprint</a> for more detailed information about quaternionic analysis.
 
