@@ -16,14 +16,14 @@ where:
 - The functions $P_{\nu}(q)$ are non-commutative polynomials in the variables
   $$z_1 = it - x,\ \ \  z_2 = jt - y,\ \ \  z_3 = kt - z,$$
   derived from the independent variable $q = t + ix + iy + iz$.
-- The functions $G_{\nu}(q)$ are given by the partial derivatives
+- The functions $G_{\nu}(q)$ are given by the partial derivatives:
   
-$$G_{a,b,c}(q) = \frac{\partial^{a+b+c}}{\partial x^a \partial y^b \partial z^c} \frac{t-ix-jy-kz}{(t^2+x^2+y^2+z^2)^2}.$$
+$$G_{a,b,c}(q) = \frac{\partial^{a+b+c}}{\partial x^a \partial y^b \partial z^c} \frac{t-ix-jy-kz}{(t^2+x^2+y^2+z^2)^2}$$
 
 $P_{\nu}(q)$ and $G_{\nu}(q)$ are quaternionic analogues of the monomials $z^n$ for $n$ positive and negative, respectively. They become increasingly complicated as the index $\nu$ grows, e.g.:
 $$P_{(1,1,1)}(q) = z_1 z_2 z_3 + z_1 z_3 z_2 + z_2 z_3 z_1 + z_2 z_1 z_3 + z_3 z_1 z_2 + z_3 z_2 z_1$$
 and
-$$G_{(1,1,1)}(q) = 192\frac{ix^2yz + jxy^2 z + kxyz^2-txyz}{(z^2+t^2+x^2+y^2)^5} - 24\frac{iyz+jxz+kyz}{(t^2+x^2+y^2+z^2)^4}.$$
+$$G_{(1,1,1)}(q) = 192\frac{ix^2yz + jxy^2 z + kxyz^2-txyz}{(z^2+t^2+x^2+y^2)^5} - 24\frac{iyz+jxz+kyz}{(t^2+x^2+y^2+z^2)^4}$$
 
 The number of operations required to compute each of these functions grows exponentially as $n=a+b+c$ increases. Compared with $z^n$ from complex analysis there is just a lot more to compute. 
 
