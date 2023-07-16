@@ -18,7 +18,7 @@ where:
   derived from the independent variable $q = t + ix + iy + iz$.
 - The functions $G_{\nu}(q)$ are given by the partial derivatives
   
-$$G_{a,b,c}(q) = \frac{\partial}{\partial^a x \partial^b y \partial^c z} \frac{t-ix-iy-iz}{(t^2+x^2+y^2+z^2)^2}.$$
+$$G_{a,b,c}(q) = \frac{\partial}{\partial^a x \partial^b y \partial^c z} \frac{t-ix-jy-kz}{(t^2+x^2+y^2+z^2)^2}.$$
 
 $P_{\nu}(q)$ and $G_{\nu}(q)$ are quaternionic analogues of the monomials $z^n$ for $n$ positive and negative, respectively. They become increasingly complicated as the index $\nu$ grows, e.g.:
 $$P_{(1,1,1)}(q) = z_1 z_2 z_3 + z_1 z_3 z_2 + z_2 z_3 z_1 + z_2 z_1 z_3 + z_3 z_1 z_2 + z_3 z_2 z_1$$
