@@ -31,7 +31,7 @@ See my <a href=https://arxiv.org/pdf/2002.06140.pdf>preprint</a> for more detail
 
 I'm especially interested in computing values of the form
 $$E_{\nu}(L)= \sum_{x \in L} G_{\nu}(x)$$
-where $x$ varies over a lattice $L$ of rank $4$ embedded in quaternion space. These are quaternionic analogues sof complex _Eisenstein series_ which are a type of modular form. It would be interesting to check numerically whether the
+where $x$ varies over a lattice $L$ of rank $4$ embedded in quaternion space. These are quaternionic analogues of complex _Eisenstein series_ which are a type of modular form. It would be interesting to check numerically whether the
 real components of $E_{\nu}(L)$ have any significant algebraic properties when the lattice $L$ has an arithmetic origin. To do this, one has to compute $E_{\nu}(L)$ to many significant digits, and at the moment this just takes too long. 
 
 # Implementation
