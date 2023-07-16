@@ -44,7 +44,6 @@ described above, we can write
 ```
 
 #include <iostream>
-#include <vector>
 #include <ginac/ginac.h>
 
 #include "quaternion.h"
